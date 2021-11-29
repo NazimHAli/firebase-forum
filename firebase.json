@@ -24,7 +24,7 @@
     }
   },
   "hosting": {
-    "public": "dist",
+    "public": "dist/forum",
     "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
     "headers": [
       {
@@ -55,8 +55,5 @@
   },
   "storage": {
     "rules": "storage.rules"
-  },
-  "functions": {
-    "source": "packages/cloud-functions"
   }
 }
