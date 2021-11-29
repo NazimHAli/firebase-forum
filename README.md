@@ -42,6 +42,10 @@
     - Console 1 - `yarn emu`
     - Console 2 - `yarn dev`
 
+## Deployment
+- [Firebase hosting](https://firebase.google.com/docs/hosting/quickstart)
+- `firebase deploy --only hosting`
+
 ## TODO
 -   [ ] Live collection subscriptions
 -   [ ] Cache data bundles - WIP
