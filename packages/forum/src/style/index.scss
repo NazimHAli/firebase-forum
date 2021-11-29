@@ -1,5 +1,3 @@
-/*! purgecss start ignore */
-
 @charset "UTF-8";
 
 // Color
@@ -28,8 +26,12 @@ $secondary-color-dark: #000 !default;
 @import "@materializecss/materialize/sass/components/grid";
 @import "@materializecss/materialize/sass/components/navbar";
 @import "@materializecss/materialize/sass/components/typography";
+
+/*! purgecss start ignore */
 @import "@materializecss/materialize/sass/components/transitions";
 @import "@materializecss/materialize/sass/components/tooltip";
+/*! purgecss end ignore */
+
 @import "@materializecss/materialize/sass/components/buttons";
 @import "@materializecss/materialize/sass/components/waves";
 @import "@materializecss/materialize/sass/components/modal";
@@ -62,5 +64,3 @@ body {
     left: 50%;
     top: 35%;
 }
-
-/*! purgecss end ignore */
