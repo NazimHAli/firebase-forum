@@ -9,7 +9,7 @@ import {
     query,
     startAfter,
 } from "firebase/firestore/lite";
-import { get, Readable } from "svelte/store";
+import { get } from "svelte/store";
 
 async function getPaginatedResults(
     collectionName: string,
@@ -52,7 +52,7 @@ async function getPaginatedResults(
 
 async function getNextThreadsPage(
     detail: { inView: boolean },
-    forumState: Readable<{ lastVisibleThreadSnapshot: any }>
+    forumState: any
 ) {
     if (detail.inView) {
         const { lastVisibleThreadSnapshot } = get(forumState);
