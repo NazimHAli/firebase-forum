@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "../../dist/cloud-functions/index.js",
   "scripts": {
-    "build": "yarn build:test && node ./esbuild.config.js",
+    "build": "yarn build:test && tsc",
     "build:test": "yarn lint && yarn test",
     "cm": "cz",
     "lint": "prettier --check .",
@@ -14,7 +14,6 @@
     "@types/node": "*",
     "@typescript-eslint/eslint-plugin": "*",
     "@typescript-eslint/parser": "*",
-    "esbuild": "*",
     "eslint": "*",
     "eslint-config-prettier": "*",
     "jest": "*",

@@ -8,6 +8,7 @@
   "scripts": {
     "build:functions": "yarn workspace @firebase-forum/cloud-functions build",
     "build:ui": "yarn workspace @firebase-forum/forum build",
+    "build:fn": "yarn workspace @firebase-forum/cloud-functions build",
     "buildall": "yarn workspaces foreach run build",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
     "cm": "cz",
@@ -47,7 +48,6 @@
     "@typescript-eslint/parser": "^5.4.0",
     "commitizen": "^4.2.4",
     "cz-conventional-changelog": "3.3.0",
-    "esbuild": "^0.14.0",
     "eslint": "^7.32.0",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-functional": "^3.7.2",
