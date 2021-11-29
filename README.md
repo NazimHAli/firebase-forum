@@ -7,6 +7,8 @@
 
 > Lightweight, performant discussion forum built with Svelte, Firebase, Firestore lite using yarn 2 workspaces. The goal is to build a fully functional discussion forum using Firebase.
 
+### [DEMO](https://svelte-firebase-forum.web.app/)
+
 ## Features
 
 -   Svelte
@@ -39,6 +41,10 @@
     - `yarn buildall`
     - Console 1 - `yarn emu`
     - Console 2 - `yarn dev`
+
+## Deployment
+- [Firebase hosting](https://firebase.google.com/docs/hosting/quickstart)
+- `firebase deploy --only hosting`
 
 ## TODO
 -   [ ] Live collection subscriptions
