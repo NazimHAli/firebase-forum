@@ -1,0 +1,24 @@
+{
+    "extends": "@tsconfig/svelte/tsconfig.json",
+    "compilerOptions": {
+        "allowJs": true,
+        "baseUrl": ".",
+        "checkJs": true,
+        "esModuleInterop": true,
+        "module": "es2020",
+        "moduleResolution": "node",
+        "resolveJsonModule": true,
+        "target": "esnext",
+        "types": ["vite/client", "node", "svelte"],
+        "useDefineForClassFields": true,
+        "paths": {
+            "@/*": ["./src/*"]
+        }
+    },
+    "include": [
+        "src/**/*.d.ts",
+        "src/**/*.ts",
+        "src/**/*.js",
+        "src/**/*.svelte"
+    ]
+}

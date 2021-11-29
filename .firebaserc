@@ -1,0 +1,7 @@
+{
+  "projects": {
+    "forum": "svelte-firebase-forum",
+    "default": "svelte-firebase-forum"
+  },
+  "targets": {}
+}

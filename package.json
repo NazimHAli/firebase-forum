@@ -1,0 +1,106 @@
+{
+  "name": "firebase-forum",
+  "version": "1.0.0",
+  "description": "Monorepo template configured with Yarn 2, Typescript, automated Gihub releases and npm publishing.",
+  "workspaces": [
+    "packages/*"
+  ],
+  "scripts": {
+    "buildall": "yarn workspaces foreach run build",
+    "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
+    "cm": "cz",
+    "dev": "yarn workspace @firebase-forum/forum watch",
+    "emu": "firebase emulators:start --import=.firebase_emulator",
+    "lintall": "prettier --check ./packages -w",
+    "prepare": "husky install",
+    "semantic-release": "semantic-release",
+    "testall": "yarn workspaces foreach run test"
+  },
+  "commitlint": {
+    "extends": [
+      "@commitlint/config-conventional"
+    ]
+  },
+  "eslintIgnore": [
+    ".pnp.js",
+    ".yarn",
+    "**/dist"
+  ],
+  "jest": {
+    "preset": "ts-jest"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.16.0",
+    "@commitlint/cli": "^15.0.0",
+    "@commitlint/config-conventional": "^15.0.0",
+    "@semantic-release/changelog": "^6.0.1",
+    "@semantic-release/commit-analyzer": "^9.0.2",
+    "@semantic-release/git": "^10.0.1",
+    "@semantic-release/npm": "^8.0.3",
+    "@semantic-release/release-notes-generator": "^10.0.3",
+    "@types/jest": "^27.0.3",
+    "@types/node": "^12.20.11",
+    "@typescript-eslint/eslint-plugin": "^5.4.0",
+    "@typescript-eslint/parser": "^5.4.0",
+    "commitizen": "^4.2.4",
+    "cz-conventional-changelog": "3.3.0",
+    "esbuild": "^0.14.0",
+    "eslint": "^7.32.0",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-functional": "^3.7.2",
+    "eslint-plugin-import": "^2.25.3",
+    "eslint-plugin-jest": "^25.2.4",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-simple-import-sort": "^7.0.0",
+    "husky": "^7.0.4",
+    "jest": "^27.3.1",
+    "lint-staged": "^12.1.2",
+    "prettier": "^2.5.0",
+    "semantic-release": "^18.0.1",
+    "ts-jest": "^27.0.7",
+    "ts-node": "^10.2.1",
+    "tsconfig-paths": "^3.12.0",
+    "typescript": "^4.5.2"
+  },
+  "packageManager": "yarn@3.1.1",
+  "release": {
+    "plugins": [
+      "@semantic-release/commit-analyzer",
+      "@semantic-release/release-notes-generator",
+      "@semantic-release/github",
+      "@semantic-release/npm"
+    ]
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/NazimHAli/frontend-monorepo-template.git"
+  },
+  "license": "MIT",
+  "author": {
+    "name": "Nazim Ali",
+    "url": "https://github.com/NazimHAli"
+  },
+  "engines": {
+    "node": ">=14.0"
+  },
+  "keywords": [
+    "monorepo",
+    "template",
+    "typescript",
+    "workspaces",
+    "yarn"
+  ],
+  "bugs": {
+    "url": "https://github.com/NazimHAli/frontend-monorepo-template/issues"
+  },
+  "homepage": "https://github.com/NazimHAli/frontend-monorepo-template#readme",
+  "lint-staged": {
+    "*": "yarn lintall"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
+  }
+}

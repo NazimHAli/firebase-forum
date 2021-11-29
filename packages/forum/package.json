@@ -1,0 +1,50 @@
+{
+    "name": "@firebase-forum/forum",
+    "license": "MIT",
+    "version": "0.1.0",
+    "type": "module",
+    "scripts": {
+        "build": "vite build",
+        "check": "svelte-check --tsconfig ./tsconfig.json",
+        "lint": "prettier --check -w .",
+        "serve": "vite preview",
+        "watch": "vite"
+    },
+    "devDependencies": {
+        "@fullhuman/postcss-purgecss": "^4.0.3",
+        "@rollup/plugin-replace": "^3.0.0",
+        "@sveltejs/vite-plugin-svelte": "^1.0.0-next.30",
+        "@tsconfig/svelte": "^2.0.1",
+        "@types/node": "^16.11.10",
+        "autoprefixer": "^10.4.0",
+        "cssnano": "^5.0.11",
+        "firebase": "^9.5.0",
+        "husky": ">=6",
+        "lint-staged": ">=10",
+        "node-sass": "^6.0.1",
+        "postcss": "^8.3.11",
+        "postcss-html": "^1.2.0",
+        "postcss-load-config": "^3.1.0",
+        "prettier": "^2.4.1",
+        "prettier-plugin-svelte": "^2.5.0",
+        "sass": "^1.43.4",
+        "stylelint": "^14.1.0",
+        "stylelint-config-html": "^1.0.0",
+        "svelte": "^3.37.0",
+        "svelte-check": "^2.1.0",
+        "svelte-preprocess": "^4.7.2",
+        "ts-node": "^10.4.0",
+        "tsc": "^2.0.3",
+        "tslib": "^2.2.0",
+        "typescript": "^4.3.2",
+        "vite": "^2.6.4"
+    },
+    "dependencies": {
+        "@materializecss/materialize": "^1.1.0-alpha",
+        "simple-spa-router-ts": "^1.0.1",
+        "svelte-inview": "^2.1.1"
+    },
+    "lint-staged": {
+        "*": "yarn lint"
+    }
+}

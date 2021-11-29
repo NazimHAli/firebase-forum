@@ -1,0 +1,62 @@
+{
+  "firestore": {
+    "rules": "firestore.rules",
+    "indexes": "firestore.indexes.json"
+  },
+  "emulators": {
+    "auth": {
+      "port": 9090
+    },
+    "firestore": {
+      "port": 9091
+    },
+    "functions": {
+      "port": 9092
+    },
+    "hosting": {
+      "port": 9093
+    },
+    "storage": {
+      "port": 9094
+    },
+    "ui": {
+      "enabled": true
+    }
+  },
+  "hosting": {
+    "public": "dist",
+    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"],
+    "headers": [
+      {
+        "source": "**/*.@(jpg|jpeg|png|gif|webp|ico)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31540000"
+          }
+        ]
+      },
+      {
+        "source": "**/*.@(css|js)",
+        "headers": [
+          {
+            "key": "Cache-Control",
+            "value": "public, max-age=31540000, immutable"
+          }
+        ]
+      }
+    ],
+    "rewrites": [
+      {
+        "source": "/createBundle",
+        "function": "createBundle"
+      }
+    ]
+  },
+  "storage": {
+    "rules": "storage.rules"
+  },
+  "functions": {
+    "source": "packages/cloud-functions"
+  }
+}

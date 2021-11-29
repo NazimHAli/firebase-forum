@@ -1,0 +1,66 @@
+/*! purgecss start ignore */
+
+@charset "UTF-8";
+
+// Color
+@import "@materializecss/materialize/sass/components/color-variables";
+
+// Override colors before the rest of the imports
+$primary-color: color("red", "accent-4") !default;
+$primary-color-light: #ff5131 !default;
+$primary-color-dark: #9b0000 !default;
+
+$secondary-color: color("grey", "darken-4") !default;
+$secondary-color-light: #fff !default;
+$secondary-color-dark: #000 !default;
+
+@import "@materializecss/materialize/sass/components/color-classes";
+
+// Variables;
+@import "@materializecss/materialize/sass/components/variables";
+
+// Reset
+@import "@materializecss/materialize/sass/components/normalize";
+
+// components
+@import "@materializecss/materialize/sass/components/global";
+@import "@materializecss/materialize/sass/components/badges";
+@import "@materializecss/materialize/sass/components/grid";
+@import "@materializecss/materialize/sass/components/navbar";
+@import "@materializecss/materialize/sass/components/typography";
+@import "@materializecss/materialize/sass/components/transitions";
+@import "@materializecss/materialize/sass/components/tooltip";
+@import "@materializecss/materialize/sass/components/buttons";
+@import "@materializecss/materialize/sass/components/waves";
+@import "@materializecss/materialize/sass/components/modal";
+@import "@materializecss/materialize/sass/components/chips";
+@import "@materializecss/materialize/sass/components/forms/forms";
+@import "@materializecss/materialize/sass/components/preloader";
+
+// Custom
+
+body {
+    overflow-y: scroll;
+    overflow-x: hidden;
+}
+
+.avatar-bg {
+    background-image: linear-gradient(to top, #09203f 0%, #537895 100%);
+}
+
+.loading-spinner {
+    position: fixed;
+    z-index: 1;
+    background-color: black;
+    width: 100%;
+    height: 100%;
+    opacity: 0.9;
+}
+
+.preloader-wrapper {
+    position: fixed;
+    left: 50%;
+    top: 35%;
+}
+
+/*! purgecss end ignore */

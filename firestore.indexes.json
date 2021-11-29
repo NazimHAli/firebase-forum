@@ -1,0 +1,22 @@
+{
+    "indexes": [
+        {
+            "collectionGroup": "comments",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "dateCreated", "order": "ASCENDING" },
+                { "fieldPath": "dateModified", "order": "ASCENDING" }
+            ]
+        },
+        {
+            "collectionGroup": "threads",
+            "queryScope": "COLLECTION",
+            "fields": [
+                { "fieldPath": "dateCreated", "order": "DESCENDING" },
+                { "fieldPath": "dateModified", "order": "DESCENDING" },
+                { "fieldPath": "title", "order": "DESCENDING" }
+            ]
+        }
+    ],
+    "fieldOverrides": []
+}
