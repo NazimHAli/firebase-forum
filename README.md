@@ -32,17 +32,22 @@
 
 ## Install & Setup
 
-- [Firestore setup & security overview](https://firebase.google.com/docs/firestore/quickstart)
-- `git clone https://github.com/NazimHAli/firebase-forum.git`
-- `yarn install`
-- Firebase environment variables
-  - Should have these veriables after completing the first step
-  - Copy [.env.example](/.env.example) to `.env.local`
-- Optional - [Setup Firebase emulator suite](https://firebase.google.com/docs/emulator-suite/install_and_configure)
-  - Contains mock data to help get started
-  - `yarn buildall`
-  - Console 1 - `yarn emu`
-  - Console 2 - `yarn dev`
+#### Required
+
+1. [Firestore setup & security overview](https://firebase.google.com/docs/firestore/quickstart)
+2. `git clone https://github.com/NazimHAli/firebase-forum.git`
+3. `yarn install`
+4. Firebase environment variables
+   - Should have these veriables after completing the first step
+   - Copy [.env.example](/.env.example) to `.env.local`
+
+#### Optional
+
+1. [Setup Firebase emulator suite](https://firebase.google.com/docs/emulator-suite/install_and_configure)
+   - Contains mock data to help get started
+2. `yarn buildall`
+3. Console 1 - `yarn emu`
+4. Console 2 - `yarn dev`
 
 ## Deployment - any static host
 
