@@ -6,11 +6,14 @@
     "packages/*"
   ],
   "scripts": {
+    "build:functions": "yarn workspace @firebase-forum/cloud-functions build",
+    "build:ui": "yarn workspace @firebase-forum/forum build",
     "buildall": "yarn workspaces foreach run build",
     "cleanall": "rm -rf dist && rm -rf node_modules && rm -rf packages/**/node_modules",
     "cm": "cz",
     "dev": "yarn workspace @firebase-forum/forum watch",
     "emu": "firebase emulators:start --import=.firebase_emulator",
+    "install:ui": "yarn workspace @firebase-forum/forum install",
     "lintall": "prettier --check ./packages -w",
     "prepare": "husky install",
     "semantic-release": "semantic-release",
@@ -82,7 +85,7 @@
     "url": "https://github.com/NazimHAli"
   },
   "engines": {
-    "node": ">=14.0"
+    "node": "14.x"
   },
   "keywords": [
     "monorepo",
@@ -101,6 +104,11 @@
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
+    }
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   }
 }
