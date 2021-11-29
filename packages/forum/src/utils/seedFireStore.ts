@@ -3,7 +3,7 @@ import { strToURL } from "@/utils/dataUtils";
 import { mockCategories } from "@/utils/mockCategories";
 import { mockThreads } from "@/utils/mockThreads";
 
-function selectRandomFromArray(array) {
+function selectRandomFromArray(array: any[]) {
     const rand = (Math.random() * array.length) | 0;
     const rValue = array[rand];
     return rValue;
@@ -23,7 +23,7 @@ const generateBoards = (module) => {
 };
 
 function generateIncreasingDates(num = 200) {
-    const lsDates = [];
+    const lsDates: Date[] = [];
     let date = new Date();
     let updatedDate = date.setMinutes(date.getMinutes() + 1);
 
@@ -53,18 +53,18 @@ const generateMockThreads = (module, board) => {
     }
 };
 
-const getMockData = async (endpoint) => {
+const getMockData = async (endpoint: string) => {
     const raw = await fetch(`http://localhost:3000/${endpoint}`);
     const res = await raw.json();
     return res;
 };
 
 const generateMockComments = (
-    module,
-    selectedThread,
-    text,
-    displayName,
-    uid
+    module: any,
+    selectedThread: { board: any; url: any },
+    text: any,
+    displayName: any,
+    uid: any
 ) => {
     module.addComment(module.globalFirestoreDB, {
         board: selectedThread.board,
@@ -88,10 +88,11 @@ const generateMockComments = (
  *      supportBoards = filterBoard(allBoards, "Support");
  *
  */
-const filterBoard = (boards, boardName) => {
+const filterBoard = (boards: any[], boardName: string) => {
     return boards.filter((board) => board?.category === boardName);
 };
 
+// @ts-ignore
 async function addMockDataToFirestore(allBoards, module, allThreads) {
     if (allBoards.length === 0) {
         generateBoards(module);

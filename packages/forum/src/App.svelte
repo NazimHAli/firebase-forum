@@ -14,7 +14,7 @@
     import { forumState } from "@/state/forumState";
     import { initRouter } from "@/utils/initRouter";
 
-    let categories = {};
+    let categories = { general: [], support: [], ideas: [] };
 
     onMount(() => {
         forumState.subscribe((response) => {

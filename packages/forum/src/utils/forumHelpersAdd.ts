@@ -1,7 +1,13 @@
-import { addDoc, collection, doc, setDoc } from "firebase/firestore/lite";
+import {
+    addDoc,
+    collection,
+    doc,
+    Firestore,
+    setDoc,
+} from "firebase/firestore/lite";
 
 async function addNewDocument(
-    db,
+    db: Firestore,
     collectionName: string,
     data: any,
     path = ""
@@ -15,11 +21,11 @@ async function addNewDocument(
     }
 }
 
-function addThread(db, data, path = "") {
+function addThread(db: Firestore, data: any, path = "") {
     addNewDocument(db, "threads", data, path);
 }
 
-function addComment(db, data, path = "") {
+function addComment(db: Firestore, data: any, path = "") {
     addNewDocument(db, "comments", data, path);
 }
 

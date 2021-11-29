@@ -3,9 +3,9 @@
     import AddThreadModal from "@/components/AddThreadModal.svelte";
     import SideNavigationBoards from "@/components/SideNavigationBoards.svelte";
 
-    export let categories;
+    export let categories: { [x: string]: any[] | undefined };
 
-    let listAllCategories = [];
+    let listAllCategories: any[] | undefined = [];
 
     afterUpdate(() => {
         if (categories["general"]?.length) {

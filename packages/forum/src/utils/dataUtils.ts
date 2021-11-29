@@ -14,11 +14,11 @@ function displayDate(dateObj: { seconds: number }) {
     return new Date(dateObj.seconds * 1000).toLocaleString();
 }
 
-function extractDataFromDocs(docs) {
+function extractDataFromDocs(docs: any[]) {
     return docs.map((doc) => doc.data());
 }
 
-function filterThreads(allThreads) {
+function filterThreads(allThreads: any[]) {
     const currentPath = window.location.hash.replace("#/", "");
     let filteredThreads = allThreads;
 

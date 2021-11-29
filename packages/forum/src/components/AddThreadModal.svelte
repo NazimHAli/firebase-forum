@@ -6,13 +6,13 @@
     import { authState } from "@/state/authState";
     import { strToURL } from "@/utils/dataUtils";
 
-    export let listAllCategories = [];
+    export let listAllCategories: any[] = [];
 
-    let selectedCategory;
+    let selectedCategory: { url: any; title: any };
     let textInput = "";
     let user;
 
-    const setCategory = (category) => {
+    const setCategory = (category: typeof selectedCategory) => {
         selectedCategory = category;
     };
 
@@ -34,7 +34,7 @@
         });
     };
 
-    const modalInstance = (create) => {
+    const modalInstance = (create: boolean) => {
         const element = document.getElementById("modal-add-thread");
 
         if (create) {
@@ -47,7 +47,7 @@
         }
     };
 
-    const toolTipInstance = (create) => {
+    const toolTipInstance = (create: boolean) => {
         const element = document.getElementById("modal-thread");
 
         if (create) {

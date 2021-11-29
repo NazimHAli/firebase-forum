@@ -12,7 +12,7 @@ import { get } from "svelte/store";
 
 const globalFirestoreDB = getFirestore();
 
-async function getAllCollectionDocs(collectionName, orderByField = null) {
+async function getAllCollectionDocs(collectionName: string, orderByField = "") {
     let theQuery;
 
     const collectionRef = collection(globalFirestoreDB, collectionName);

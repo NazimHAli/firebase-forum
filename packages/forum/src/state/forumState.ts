@@ -41,17 +41,17 @@ function createCustomStore() {
     return {
         subscribe,
         update,
-        setLastSnap: (lastSnap) =>
+        setLastSnap: (lastSnap: any) =>
             update((prevState) => ({
                 ...prevState,
                 lastVisibleThreadSnapshot: lastSnap,
             })),
-        setAllComments: (allComments) =>
+        setAllComments: (allComments: any) =>
             update((prevState) => ({
                 ...prevState,
                 allComments: allComments,
             })),
-        setBoards: (boards) =>
+        setBoards: (boards: any) =>
             update((prevState) => ({
                 ...prevState,
                 boards: boards,
@@ -63,7 +63,7 @@ function createCustomStore() {
                     prevState.threads.concat(allThreads)
                 ),
             })),
-        setSelectedThread: (selectedThread) =>
+        setSelectedThread: (selectedThread: any) =>
             update((prevState) => ({
                 ...prevState,
                 selectedThread: selectedThread,
@@ -73,7 +73,7 @@ function createCustomStore() {
                 ...prevState,
                 selectedThread: { board: "" },
             })),
-        updateAllThreads: (allThreads) =>
+        updateAllThreads: (allThreads: ConcatArray<never>) =>
             update((prevState) => ({
                 ...prevState,
                 threads: prevState.threads.concat(allThreads),

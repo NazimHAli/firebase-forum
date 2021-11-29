@@ -9,12 +9,6 @@ type User = {
     created_time: Timestamp;
 };
 
-type PostRequest = {
-    userId: UserID;
-    postId: PostID;
-    created_time: Timestamp;
-};
-
 type Post = {
     id: PostID;
     created_time: Timestamp;

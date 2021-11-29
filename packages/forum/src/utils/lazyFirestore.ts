@@ -2,18 +2,19 @@ import { firestoreState } from "@/state/firestoreState";
 import { extractDataFromDocs } from "@/utils/dataUtils";
 import {
     collection,
+    FieldPath,
     getDocs,
     limit,
     orderBy,
     query,
     startAfter,
 } from "firebase/firestore/lite";
-import { get } from "svelte/store";
+import { get, Readable } from "svelte/store";
 
 async function getPaginatedResults(
-    collectionName,
-    orderByField,
-    getInitialResults,
+    collectionName: string,
+    orderByField: string | FieldPath,
+    getInitialResults: boolean,
     lastVisibleSnapshot = null,
     limitNum = 25
 ) {
@@ -49,7 +50,10 @@ async function getPaginatedResults(
     }
 }
 
-async function getNextThreadsPage(detail, forumState) {
+async function getNextThreadsPage(
+    detail: { inView: boolean },
+    forumState: Readable<{ lastVisibleThreadSnapshot: any }>
+) {
     if (detail.inView) {
         const { lastVisibleThreadSnapshot } = get(forumState);
 
@@ -69,7 +73,7 @@ async function getNextThreadsPage(detail, forumState) {
         forumState.setLastSnap(response[0]);
 
         // Update threads if new ones exist
-        if (response[1].length > 0) {
+        if (response && response[1]?.length > 0) {
             forumState.updateAllThreads(response[1]);
         }
     }

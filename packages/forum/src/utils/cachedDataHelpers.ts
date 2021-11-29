@@ -21,7 +21,7 @@ async function fetchCachedFirestoreData() {
         const query = await namedQuery(db, "latest-threads-query");
         const cachedDocs = await getDocsFromCache(query);
 
-        console.log("Returned cachedDocs");
+        console.log("Returned cachedDocs", cachedDocs);
     });
 }
 
