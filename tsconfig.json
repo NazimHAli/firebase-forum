@@ -1,11 +1,18 @@
 {
   "compilerOptions": {
-    "declaration": true,
+    "allowJs": true,
+    "baseUrl": ".",
+    "checkJs": true,
+    "declaration": false,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
-    "module": "commonjs",
+    "module": "es2020",
+    "moduleResolution": "node",
+    "noUnusedLocals": true,
+    "removeComments": true,
+    "resolveJsonModule": true,
     "skipLibCheck": true,
     "strict": true,
-    "target": "es6"
+    "target": "esnext"
   }
 }

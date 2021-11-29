@@ -5,6 +5,7 @@
         "baseUrl": ".",
         "checkJs": true,
         "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true,
         "module": "es2020",
         "moduleResolution": "node",
         "resolveJsonModule": true,

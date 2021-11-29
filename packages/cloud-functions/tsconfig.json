@@ -2,9 +2,10 @@
   "extends": "../../tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
+    "outDir": "../../dist/cloud-functions/",
     "paths": {
       "@packageA/*": ["src/*"]
     }
   },
-  "include": ["src/**/*.ts", "test/**/*.ts"]
+  "include": ["src/**/*.ts"]
 }
